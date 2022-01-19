@@ -1,0 +1,39 @@
+{
+  "name": "storybook-addon-mobile-qrcode",
+  "version": "1.0.0",
+  "description": "storybook-addon-mobile-qrcode",
+  "main": "dist/preset.js",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "index.js",
+    "package.json"
+  ],
+  "scripts": {
+    "start": "npm run storybook",
+    "build": "babel ./src --out-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6008 --no-manager-cache",
+    "build-storybook": "build-storybook"
+  },
+  "author": "juno",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.16.8",
+    "qrcode": "^1.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.13",
+    "@storybook/addon-essentials": "^6.4.13",
+    "@storybook/addon-links": "^6.4.13",
+    "@storybook/react": "^6.4.13",
+    "babel-loader": "^8.2.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
