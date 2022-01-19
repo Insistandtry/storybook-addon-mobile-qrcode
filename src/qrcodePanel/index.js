@@ -6,6 +6,8 @@ export const QRCODE_ADDON_ID = 'storybook/qrcode';
 export const QRCODE_PANEL_ID = `${QRCODE_ADDON_ID}/panel`;
 
 const QR_CODE_CANVAS_ID = '_qr_code_canvas_id';
+const style = { padding: '24px' };
+const descStyle = { marginTop: '12px' };
 
 const QrCodePanel = ({ api }) => {
   
@@ -39,8 +41,6 @@ const QrCodePanel = ({ api }) => {
   const [qrcodeUrl, setQrcodeUrl] = useState();
 
   useEffect(() => {
-    console.log('url changed! ==> ', url);
-    
     setQrcodeUrl(url);
     qrcodeUrlRef.current = url;
   }, [url]);
@@ -58,10 +58,10 @@ const QrCodePanel = ({ api }) => {
   }, [qrcodeUrl]);
 
   return (
-    <div style={{ padding: "24px" }}>
+    <div style={style}>
       <canvas id={QR_CODE_CANVAS_ID}></canvas>
-      <div>
-        预览地址: <a href={qrcodeUrl}>{qrcodeUrl}</a>
+      <div style={descStyle}>
+        预览地址: <a href={qrcodeUrl} target="_blank" >{qrcodeUrl}</a>
       </div>
     </div>
   )
