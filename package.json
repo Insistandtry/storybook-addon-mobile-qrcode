@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-mobile-qrcode",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "storybook-addon-mobile-qrcode",
   "main": "dist/preset.js",
   "files": [

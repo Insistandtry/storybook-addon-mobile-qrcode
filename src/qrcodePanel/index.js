@@ -12,7 +12,7 @@ const descStyle = { marginTop: '12px' };
 const QrCodePanel = ({ api }) => {
   
   const getQrcodeUrl = () => {
-    let url = `${window.location.origin}`;
+    let url = `${window.location.origin}${window.location.pathname}`;
     try {
       if(api){
         const prefix = 'iframe.html?'
@@ -26,7 +26,7 @@ const QrCodePanel = ({ api }) => {
           }
         }
         
-        url = `${url}/${prefix}id=${storyId}${queryParams}${afterfix}`;
+        url = `${url}${prefix}id=${storyId}${queryParams}${afterfix}`;
       }
     }catch(e){
       console.log('getQrcodeUrl error ==> ', e);
