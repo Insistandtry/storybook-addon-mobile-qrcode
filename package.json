@@ -12,7 +12,7 @@
   "scripts": {
     "start": "npm run storybook",
     "build": "babel ./src --out-dir ./dist",
-    "storybook": "start-storybook -p 6008"
+    "storybook": "start-storybook -p 6008 --no-manager-cache"
   },
   "author": "juno",
   "homepage": "https://github.com/Insistandtry/storybook-addon-mobile-qrcode",
